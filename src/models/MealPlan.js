@@ -8,7 +8,7 @@ const PlanDiaSchema = new mongoose.Schema({
 });
 
 const MealPlanSchema = new mongoose.Schema({
-  // Guardaremos un solo documento que contenga todos los días
+
   Lunes: PlanDiaSchema,
   Martes: PlanDiaSchema,
   Miércoles: PlanDiaSchema,

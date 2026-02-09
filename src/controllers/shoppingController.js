@@ -5,7 +5,7 @@ exports.getShoppingList = async (req, res) => {
     const plans = await MealPlan.find();
     const list = {};
 
-    // Lógica para consolidar ingredientes
+
     plans.forEach(plan => {
       plan.ingredients.forEach(ing => {
         if (list[ing.name]) {

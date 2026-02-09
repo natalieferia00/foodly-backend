@@ -1,4 +1,4 @@
-// controllers/planController.js
+
 const MealPlan = require('../models/MealPlan');
 
 exports.getPlan = async (req, res) => {
@@ -12,10 +12,10 @@ exports.getPlan = async (req, res) => {
 
 exports.updatePlan = async (req, res) => {
   try {
-    // Actualiza el documento existente o crea uno nuevo (upsert)
+
     const plan = await MealPlan.findOneAndUpdate(
-      {}, 
-      req.body, 
+      {},
+      req.body,
       { upsert: true, new: true }
     );
     res.json(plan);
